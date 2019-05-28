@@ -31,9 +31,8 @@ function logDriverNames(drivers) {
     return drivers.reduce(reduceRevenue, 0);
   };
 
-  const averageRevenue = function (drivers) {
-    const averageRevenue = function (agg, dr, i, drivers) {
-      return (agg + dr.revenue) / (drivers.length)
+  const averageRevenue = function(drivers) {
+      let totalRev = totalRevenue(drivers);
+      return (totalRev / drivers.length);
     };
-      return drivers.reduce(averageRevenue, 0);
-  }
+    
